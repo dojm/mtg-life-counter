@@ -1,56 +1,64 @@
-// UI elements
-const tensUp = document.getElementById('tens-up');
-const tensDown = document.getElementById('tens-down');
-const onesUp = document.getElementById('ones-up');
-const onesDown = document.getElementById('ones-down');
-const tensContainer = document.getElementById('tens-digit');
-const onesContainer = document.getElementById('ones-digit');
-let tensDigit = parseInt(document.getElementById('tens-digit').textContent);
-let onesDigit = parseInt(document.getElementById('ones-digit').textContent);
-
 // listen for click
-tensUp.addEventListener('click', dialUp);
-tensDown.addEventListener('click', dialDown);
-onesUp.addEventListener('click', dialUp);
-onesDown.addEventListener('click', dialDown);
+wrapper.addEventListener('click', dialUp);
+wrapper.addEventListener('click', dialDown);
+wrapper.addEventListener('click', reset);
+
 
 // turn dial up or down
 function dialUp(e) {
-  if(e.target === tensUp){
+  if(e.target.classList.contains('tens-up')){
+    let tensDigit = parseInt(e.target.nextElementSibling.textContent);
+
     if(tensDigit === 9) {
       tensDigit = 0;
-      tensContainer.textContent = tensDigit;
+      e.target.nextElementSibling.textContent = tensDigit;
     } else {
       tensDigit++;
-      tensContainer.textContent = tensDigit;
+      e.target.nextElementSibling.textContent = tensDigit;
     }
-  } else if (e.target === onesUp) {
+  } else if (e.target.classList.contains('ones-up')) {
+    let onesDigit = parseInt(e.target.nextElementSibling.textContent);
+
     if(onesDigit === 9) {
       onesDigit = 0;
-      onesContainer.textContent = onesDigit;
+      e.target.nextElementSibling.textContent = onesDigit;
     } else {
       onesDigit++;
-      onesContainer.textContent = onesDigit;
+      e.target.nextElementSibling.textContent = onesDigit;
     }
   }
 }
 
 function dialDown(e) {
-  if(e.target === tensDown) {
+  if(e.target.classList.contains('tens-down')) {
+    let tensDigit = parseInt(e.target.previousElementSibling.textContent);
+
     if(tensDigit === 0) {
       tensDigit = 9;
-      tensContainer.textContent = tensDigit;
+      e.target.previousElementSibling.textContent = tensDigit;
     } else {
       tensDigit--;
-      tensContainer.textContent = tensDigit;
-    }
-  } else if (e.target === onesDown) {
+      e.target.previousElementSibling.textContent = tensDigit;
+    } 
+  } else if (e.target.classList.contains('ones-down')) {
+    let onesDigit = parseInt(e.target.previousElementSibling.textContent);
+
     if(onesDigit === 0) {
       onesDigit = 9;
-      onesContainer.textContent = onesDigit;
+      e.target.previousElementSibling.textContent = onesDigit;
     } else {
       onesDigit--;
-      onesContainer.textContent = onesDigit;
+      e.target.previousElementSibling.textContent = onesDigit;
     }
+  }
+}
+
+function reset(e) {
+  if(e.target.classList.contains('reset')) {
+    let tensDigit = e.target.previousElementSibling.previousElementSibling.querySelector('.tens-digit');
+    let onesDigit = e.target.previousElementSibling.querySelector('.ones-digit');
+    
+    onesDigit.textContent = 0;
+    tensDigit.textContent = 0;
   }
 }

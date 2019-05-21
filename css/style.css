@@ -11,6 +11,10 @@ body {
   font-family: 'Open-Sans', sans-serif;
 }
 
+main #you, main #opponent {
+  margin: 20px 0;
+}
+
 main #wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -33,7 +37,8 @@ main h1 {
   font-weight: 300;
 }
 
-main #counter {
+main .counter {
+  position: relative;
   background: #fff;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -45,17 +50,17 @@ main #counter {
   border: 1px solid #555;
 }
 
-main i {
-  padding: 0;
-  margin: 0;
-}
-
 main i:hover {
   color: #999;
   cursor: pointer;
 }
 
-main #tens, main #ones {
+main .fa-caret-down, main .fa-caret-up {
+  padding: 0;
+  margin: 0;
+}
+
+main .tens, main .ones {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -68,9 +73,16 @@ main #tens, main #ones {
           align-items: center;
 }
 
-main #tens-digit, main #ones-digit {
+main .tens-digit, main .ones-digit {
   border: 1px solid #555;
   border-radius: 4px;
   padding: 0px 8px;
+}
+
+main .fa-redo {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  font-size: 1.5rem;
 }
 /*# sourceMappingURL=style.css.map */

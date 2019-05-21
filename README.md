@@ -7,3 +7,4 @@ I separated the tens and ones digit to make it easier to add or subtract life.
 
 Will be adding more / expanding the idea soon.
 
+[[Demo]](https://dojm.github.io/mtg-life-counter/)
