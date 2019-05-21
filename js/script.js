@@ -57,8 +57,8 @@ function reset(e) {
   if(e.target.classList.contains('reset')) {
     let tensDigit = e.target.previousElementSibling.previousElementSibling.querySelector('.tens-digit');
     let onesDigit = e.target.previousElementSibling.querySelector('.ones-digit');
-    
+
     onesDigit.textContent = 0;
-    tensDigit.textContent = 0;
+    tensDigit.textContent = 2;
   }
 }
