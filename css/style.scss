@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-size: 3rem;
+  font-family: 'Open-Sans', sans-serif;
+}
+
+main {
+
+  #wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+
+  h1 {
+    font-size: 2rem;
+    font-weight: 300;
+  }
+
+  #counter {
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    width: 250px;
+    border: 1px solid #555;
+  }
+
+  // #counter > div {
+
+  // }
+
+  i:before {
+    padding: 0;
+    margin: 0;
+  }
+
+  #tens, #ones {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #tens-digit, #ones-digit {
+    border: 1px solid #555;
+    border-radius: 4px;
+    padding: 0px 8px;
+  }
+}
+

@@ -1,0 +1,71 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans&display=swap");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-size: 3rem;
+  font-family: 'Open-Sans', sans-serif;
+}
+
+main #wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 100vh;
+}
+
+main h1 {
+  font-size: 2rem;
+  font-weight: 300;
+}
+
+main #counter {
+  background: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 250px;
+  border: 1px solid #555;
+}
+
+main i:before {
+  padding: 0;
+  margin: 0;
+}
+
+main #tens, main #ones {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main #tens-digit, main #ones-digit {
+  border: 1px solid #555;
+  border-radius: 4px;
+  padding: 0px 8px;
+}
+/*# sourceMappingURL=style.css.map */
