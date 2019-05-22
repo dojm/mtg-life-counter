@@ -11,10 +11,6 @@ body {
   font-family: 'Open-Sans', sans-serif;
 }
 
-main #you, main #opponent {
-  margin: 10px 0;
-}
-
 main #wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -30,6 +26,16 @@ main #wrapper {
       -ms-flex-align: center;
           align-items: center;
   min-height: 100vh;
+}
+
+main #you, main #opponent {
+  margin: 10px 0;
+}
+
+main #you {
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
 }
 
 main h1 {
@@ -84,5 +90,22 @@ main .fa-redo {
   bottom: 10px;
   right: 10px;
   font-size: 1.5rem;
+}
+
+@media (min-width: 1024px) {
+  main #wrapper {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  main #you {
+    -webkit-box-ordinal-group: 1;
+        -ms-flex-order: 0;
+            order: 0;
+  }
+  main #you, main #opponent {
+    margin: 0 50px;
+  }
 }
 /*# sourceMappingURL=style.css.map */

@@ -13,16 +13,20 @@ body {
 
 main {
 
-  #you, #opponent {
-    margin: 10px 0;
-  }
-
   #wrapper {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+  }
+
+  #you, #opponent {
+    margin: 10px 0;
+  }
+
+  #you {
+    order: 1;
   }
 
   h1 {
@@ -69,6 +73,20 @@ main {
     bottom: 10px;
     right: 10px;
     font-size: 1.5rem;
+  }
+
+  @media(min-width: 1024px) {
+    #wrapper {
+      flex-direction: row;
+    }
+
+    #you {
+      order: 0;
+    }
+
+    #you, #opponent {
+      margin: 0 50px;
+    }
   }
 }
 
