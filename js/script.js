@@ -115,7 +115,7 @@ function counterDown(e) {
 
 // add more custom counters
 function addNewCounter(e) {
-  if(e.target.classList.contains('fa-plus')) {
+  if(e.target.classList.contains('add-new-counter')) {
     let newCounter = document.createElement('div');
     let newInput = document.createElement('input');
     let newCounterUp = document.createElement('i');
@@ -134,8 +134,8 @@ function addNewCounter(e) {
     newCounter.appendChild(newCounterUp);
     newCounter.appendChild(newCounterDown);
     newCounter.appendChild(newCounterOutput);
-    e.target.parentElement.parentElement.previousElementSibling.appendChild(newCounter);
-    e.target.parentElement.parentElement.previousElementSibling.style.height = e.target.parentElement.parentElement.previousElementSibling.scrollHeight + 'px';
+    e.target.parentElement.previousElementSibling.appendChild(newCounter);
+    e.target.parentElement.previousElementSibling.style.height = e.target.parentElement.previousElementSibling.scrollHeight + 'px';
 
   }
 }

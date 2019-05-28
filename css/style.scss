@@ -136,14 +136,13 @@ main {
       border-right: 1px solid #555;
       border-left: 1px solid #555;
       border-bottom: 1px solid #555;
-      width: 45px;
+      width: 38px;
       padding: 5px 2px;
       text-align: center;
-      font-size: 0.8rem;
+      font-size: 0.9rem;
+      cursor: pointer;
     }
   }
-
-
 
   @media(min-width: 420px) {
     #wrapper {
