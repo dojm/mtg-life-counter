@@ -3,8 +3,10 @@
 This is a simple life counter for the game Magic: The Gathering.
 
 A typical game starts at 20 life.  
-I separated the tens and ones digit to make it easier to add or subtract life. 
 
-Will be adding more / expanding the idea soon.
+- Separate dials for tens and ones digits (for extra convenience)
+- Custom counters (e.g. keeping track of poison) + collapsible
+- Reset button
+- Mobile friendly
 
 [[Demo]](https://dojm.github.io/mtg-life-counter/)
