@@ -94,6 +94,7 @@ main {
     transition: height 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
 
     .add-counter {
+      width: 250px;
       display: flex;
       justify-content: space-evenly;
       align-items: center;
@@ -113,8 +114,7 @@ main {
       .counter-output {
         display: inline-block;
         font-size: 0.9rem;
-        margin-left: 10px;
-        width: 20px;
+        width: 25px;
       }
     }
   }

@@ -118,6 +118,7 @@ main .collapse {
 }
 
 main .collapse .add-counter {
+  width: 250px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -144,8 +145,7 @@ main .collapse .add-counter .counter-add, main .collapse .add-counter .counter-m
 main .collapse .add-counter .counter-output {
   display: inline-block;
   font-size: 0.9rem;
-  margin-left: 10px;
-  width: 20px;
+  width: 25px;
 }
 
 main .show {
