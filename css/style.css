@@ -132,7 +132,6 @@ main .collapse .add-counter {
 }
 
 main .collapse .add-counter .counter-name {
-  margin-left: 5px;
   border: 1px solid #d5d5d5;
   padding: 3px;
   width: 130px;
@@ -141,6 +140,11 @@ main .collapse .add-counter .counter-name {
 main .collapse .add-counter .counter-add, main .collapse .add-counter .counter-minus {
   font-size: 1.25rem;
   margin: 8px;
+}
+
+main .collapse .add-counter .delete-counter {
+  font-size: 1rem;
+  margin: 5px;
 }
 
 main .collapse .add-counter .counter-output {

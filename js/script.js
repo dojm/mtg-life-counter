@@ -6,6 +6,7 @@ wrapper.addEventListener('click', expand);
 wrapper.addEventListener('click', counterUp);
 wrapper.addEventListener('click', counterDown);
 wrapper.addEventListener('click', addNewCounter);
+wrapper.addEventListener('click', deleteCounter);
 
 
 // turn life counter dial up or down
@@ -118,6 +119,7 @@ function addNewCounter(e) {
   if(e.target.classList.contains('add-new-counter')) {
     let newCounter = document.createElement('div');
     let newInput = document.createElement('input');
+    let newDeleteCounter = document.createElement('i');
     let newCounterUp = document.createElement('i');
     let newCounterDown = document.createElement('i');
     let newCounterOutput = document.createElement('div');
@@ -126,16 +128,29 @@ function addNewCounter(e) {
     newInput.setAttribute('type', 'text');
     newInput.setAttribute('class', 'counter-name');
     newInput.setAttribute('placeholder', 'Counter Name...');
+    
+    newDeleteCounter.setAttribute('class', 'fas fa-times delete-counter');
     newCounterUp.setAttribute('class', 'fas fa-caret-up counter-add');
     newCounterDown.setAttribute('class', 'fas fa-caret-down counter-minus');
     newCounterOutput.setAttribute('class', 'counter-output');
 
+    newCounter.appendChild(newDeleteCounter);
     newCounter.appendChild(newInput);
     newCounter.appendChild(newCounterUp);
     newCounter.appendChild(newCounterDown);
     newCounter.appendChild(newCounterOutput);
     e.target.parentElement.previousElementSibling.appendChild(newCounter);
     e.target.parentElement.previousElementSibling.style.height = e.target.parentElement.previousElementSibling.scrollHeight + 'px';
+  }
+}
 
+// delete a counter
+function deleteCounter(e) {
+  if(e.target.classList.contains('delete-counter')) {
+    const counterHeight = 40;
+    let previousCollapseHeight = parseInt(e.target.parentElement.parentElement.style.height);
+    let newCollapseHeight = previousCollapseHeight - counterHeight;
+    e.target.parentElement.parentElement.style.height = newCollapseHeight + 'px';
+    e.target.parentElement.remove();
   }
 }
