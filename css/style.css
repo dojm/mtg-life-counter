@@ -11,6 +11,23 @@ body {
   font-family: 'Open-Sans', sans-serif;
 }
 
+main {
+  background-image: url("../img/clouds-pink-purple.jpg");
+  background-size: cover;
+  position: relative;
+  z-index: -2;
+}
+
+main::after {
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  content: '';
+  background: rgba(255, 255, 255, 0.5);
+  position: absolute;
+  z-index: -1;
+}
+
 main #wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -53,7 +70,7 @@ main h1 {
 
 main .counter {
   position: relative;
-  background: #fff;
+  background: rgba(255, 255, 255, 0.3);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -65,7 +82,7 @@ main .counter {
 }
 
 main i:hover {
-  color: #999;
+  color: #888;
   cursor: pointer;
 }
 
@@ -110,6 +127,7 @@ main .fa-angle-double-down, main .fa-angle-double-up {
 main .collapse {
   width: 250px;
   border: 1px solid #555;
+  background: rgba(255, 255, 255, 0.3);
   display: block;
   height: 0;
   overflow: hidden;
@@ -118,7 +136,8 @@ main .collapse {
 }
 
 main .collapse .add-counter {
-  width: 250px;
+  width: inherit;
+  background: inherit;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -188,11 +207,13 @@ main .buttons .add-new-counter {
 
 @media (min-width: 420px) {
   main #wrapper {
-    margin-top: 20vh;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   main #you {
     -webkit-box-ordinal-group: 1;
