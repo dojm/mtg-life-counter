@@ -12,17 +12,18 @@ body {
 }
 
 main {
-  background-image: url('../img/clouds-pink-purple.jpg');
   background-size: cover;
   position: relative;
-  z-index: -2;
 
   &::after {
-    width: 100vw;
-    height: 100vh;
+    background-image: url('../img/clouds-pink-purple.jpg');
+    background-size: cover;
+    opacity: 0.5;
+    left: 0;
+    right: 0;
     top: 0;
+    bottom: 0;
     content: '';
-    background: rgba(#fff, 0.5);
     position: absolute;
     z-index: -1;
   }
